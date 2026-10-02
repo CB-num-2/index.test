@@ -2,6 +2,9 @@
 <html>
 <head>
     <style>
+        body {
+            padding:0px;
+        }
         .color-block {
             width: 200px;
             height: 200px;
@@ -12,7 +15,7 @@
 </head>
 <body>
     <div id="myBlock" class="color-block"></div>
-    <div class="color-block">This block won't change</div>
+    <h4 class="color-block">This block won't change</h4>
     <button onclick="cBC()">Change Color</button>
 
     <script>
@@ -25,9 +28,9 @@ function cBC() {
     block.style.backgroundColor = colors[currentStep];
     setTimeout(() => {
         cBC()
-                     }, 500)
+                     }, 300)
 }
-        
+    cBC();
     </script>
 
 </body>
