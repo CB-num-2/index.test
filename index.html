@@ -19,11 +19,15 @@
 const colors = ["red", "orange", "yellow", "green", "blue", "purple"];
 let currentStep = 0;
 
-function changeBlockColor() {
+function cBC() {
     const block = document.getElementById("myBlock");
     currentStep = (currentStep + 1) % colors.length; 
     block.style.backgroundColor = colors[currentStep];
+    setTimeout(() => {
+        cBC()
+                     }, 500)
 }
+        
     </script>
 
 </body>
