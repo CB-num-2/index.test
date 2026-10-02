@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* This represents your "block" */
+        .color-block {
+            width: 200px;
+            height: 200px;
+            background-color: lightgray;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Give your block a unique ID -->
+    <div id="myBlock" class="color-block"></div>
+    <div class="color-block">This block won't change</div>
+
+    <!-- 2. Create a trigger (like a button) -->
+    <button onclick="changeBlockColor()">Change Color</button>
+
+    <script>
+        function changeBlockColor() {
+            // 3. Find the exact block by its ID
+            const block = document.getElementById("myBlock");
+            
+            // 4. Change its background color
+            block.style.backgroundColor = "coral"; 
+        }
+    </script>
+
+</body>
+</html>
